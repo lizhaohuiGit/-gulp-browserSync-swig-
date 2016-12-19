@@ -85,11 +85,7 @@ gulp.task('server', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(filePath.sass, ['style']);
-    gulp.watch(filePath.views, ['template']);
-    gulp.watch(filePath.js, ['script']);
-    gulp.watch(filePath.images, ['images']);
-    gulp.watch(filePath.fonts, ['fonts']);
+    gulp.watch(assetsPath + '**/*', ['build']);
     browserSync.reload();
 });
 
